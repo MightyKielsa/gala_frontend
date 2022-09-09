@@ -1,0 +1,15 @@
+.curtains-landing{
+    height: 90vh;
+    width: auto;
+    position: fixed;
+    top:0;
+    bottom:auto;
+}
+
+#curtain-left-landing {
+    left:0;
+}
+
+#curtain-right-landing {
+    right:0;
+}
