@@ -1,38 +1,21 @@
+@import url('https://fonts.googleapis.com/css2?family=Kanit:wght@400;600&display=swap');
+
+:root {
+    --primary: #058ED9;
+	--primary-tint: #50b0e4;
+    --primary-shade: #035582;
+	--primary-font-light: #e6f4fb;
+	--primary-font-dark: #011c2b;
+	--secondary: #C1292E;
+	--secondary-tint: #d4696d;
+    --secondary-shade: #871d20;
+	--supporting-1: #241023;
+	--supporting-2: #F71735;
+	--background: #F4EBD9;
+	--font-fam1: 'Kanit', sans-serif;
+}
+
 .App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+    background-color: var(--background);
+    color: var(--primary-font-dark);
 }
