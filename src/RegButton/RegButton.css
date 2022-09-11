@@ -1,0 +1,9 @@
+.reg-button {
+    width: 150px;
+    height: 50px;
+    border: none;
+    border-radius: 5px;
+    background-color: var(--primary-tint);
+    color: var(--primary-font-dark);
+    font-size: 20px;
+}

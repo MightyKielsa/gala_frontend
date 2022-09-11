@@ -1,0 +1,33 @@
+.main-page-container {
+    width: auto;
+    height: auto;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+.main-header-main {
+    font-size: 60px;
+    position: absolute;
+    margin-left: auto;
+    margin-right: auto;
+    left: 0;
+    right: 0;
+    top:30px;
+    font-family: var(--font-fam1);
+    font-weight: 600;
+    width: max-content;
+}
+
+#left-button-main {
+    position: absolute;
+    left: 40px;
+    top:40px
+}
+
+#right-button-main {
+    position: absolute;
+    right: 40px;
+    top:40px;
+}
