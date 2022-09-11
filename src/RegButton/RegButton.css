@@ -6,4 +6,5 @@
     background-color: var(--primary-tint);
     color: var(--primary-font-dark);
     font-size: 20px;
+    box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.5);
 }
