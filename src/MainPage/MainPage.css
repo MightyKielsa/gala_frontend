@@ -61,5 +61,20 @@
     height: 100%;
     position: absolute;
     right:0;
-    background-color: aqua;
+    background-color: var(--background);
+}
+
+.profil-header-main {
+    color: var(--primary-font-dark);
+    font-size: 60px;
+    position: absolute;
+    margin-left: auto;
+    margin-right: auto;
+    left: 0;
+    right: 0;
+    top:20px;
+    font-family: var(--font-fam1);
+    font-weight: 600;
+    width: max-content;
+    margin-top: 0;
 }

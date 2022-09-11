@@ -17,7 +17,7 @@ function MainPage () {
         <RegButton btnName="Wiecej spierdolenia" btnId="left-low-button-main"/> <RegButton btnName="Zaglosuj" btnId="right-low-button-main"/>
     </div>
     <div className="profil-page-container">
-
+        <h1 className="profil-header-main">Profil Spierdolenia</h1>
     </div>
     </div>
 }
