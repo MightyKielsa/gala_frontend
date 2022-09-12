@@ -13,7 +13,6 @@ function MainPage () {
     let userSlowaInfo = {number:0, ranking:0,};
 
     for (let i=0; i<wiadomosciArr.length; i++) {
-        console.log("wiadomosci array", wiadomosciArr[i])
         if(wiadomosciArr[i].name === userName){
             userWiadomosciInfo = {number: wiadomosciArr[i].number, ranking: i+1,};
         }
@@ -36,11 +35,11 @@ function MainPage () {
         <h1 className="profil-header-main">Profil Spierdolenia</h1>
         <div className="info-container-profile">
             <p><b>USER:</b> {userName}</p>
-            <div className="wiadomosci-info">
+            <div className="wiadomosci-info-profile">
                 <p><strong>WIADOMOSCI:</strong> {userWiadomosciInfo.number}</p>
                 <p><strong>MIEJSCE W RANKINGU:</strong> {userWiadomosciInfo.ranking}</p>
             </div>
-            <div>
+            <div className="slowa-info-profile">
                 <p><strong>SLOWA:</strong> {userSlowaInfo.number}</p>
                 <p><strong>MIEJSCE W RANKINGU:</strong> {userSlowaInfo.ranking}</p>
             </div>
