@@ -56,6 +56,8 @@
     right: 450px;
 }
 
+
+/* ____________________________PROFIL PAGE_____________________________ */
 .profil-page-container {
     width: 100%;
     height: 100%;
@@ -77,4 +79,14 @@
     font-weight: 600;
     width: max-content;
     margin-top: 0;
+}
+
+.info-container-profile {
+    width: 100%;
+    height: 80%;
+    position: absolute;
+    bottom: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
