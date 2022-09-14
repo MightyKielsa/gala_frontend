@@ -21,6 +21,12 @@ function MainPage () {
         }
     }
 
+    function onProfileClick () {
+        skillFunc(object);
+		var skillCard = document.getElementById('.profil-page-container');
+		skillCard.style.right = 0;
+    }
+
     return <div className="main-page-viewport">
         <section className="main-page-container">
         <h1 className="main-header-main">Gala Spierdolenia 2022</h1>
