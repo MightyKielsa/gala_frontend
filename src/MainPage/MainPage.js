@@ -31,7 +31,9 @@ function MainPage () {
         </div>
         <RegButton btnName="Wiecej spierdolenia" btnId="left-low-button-main"/> <RegButton btnName="Zaglosuj" btnId="right-low-button-main"/>
     </section>
+    {/* ________________________PROFILE PAGE_________________________ */}
     <section className="profil-page-container">
+    <RegButton btnName="WYLOGUJ" btnId="left-button-profile"/><RegButton btnName="ZAGLOSUJ" btnId="right-button-profile"/>
         <h1 className="profil-header-main">Profil Spierdolenia</h1>
         <div className="info-container-profile">
             <p><b>USER:</b> {userName}</p>
@@ -44,6 +46,7 @@ function MainPage () {
                 <p><strong>MIEJSCE W RANKINGU:</strong> {userSlowaInfo.ranking}</p>
             </div>
         </div>
+        <RegButton btnName="POWROT" btnId="bottom-button-profile"/>
     
     </section>
     </div>
