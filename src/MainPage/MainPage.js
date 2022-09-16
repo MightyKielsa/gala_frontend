@@ -29,10 +29,17 @@ function MainPage() {
   }
 
   function onProfileClick() {
-    var mainPageCont = document.getElementById("#main-page-container");
-    mainPageCont.style.right = -"100%";
-    var profilPageCont = document.getElementById("#profil-page-container");
+    var mainPageCont = document.getElementById("main-page-container");
+    mainPageCont.style.right = "100%";
+    var profilPageCont = document.getElementById("profil-page-container");
     profilPageCont.style.right = 0;
+  }
+
+  function onPowrotClick() {
+    var mainPageCont = document.getElementById("main-page-container");
+    mainPageCont.style.right = 0;
+    var profilPageCont = document.getElementById("profil-page-container");
+    profilPageCont.style.right = "-100%";
   }
 
   return (
@@ -84,7 +91,11 @@ function MainPage() {
             </p>
           </div>
         </div>
-        <RegButton btnName="POWROT" btnId="bottom-button-profile" />
+        <RegButton
+          btnName="POWROT"
+          btnId="bottom-button-profile"
+          onClick={onPowrotClick}
+        />
       </section>
     </div>
   );

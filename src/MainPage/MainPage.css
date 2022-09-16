@@ -14,6 +14,7 @@
   top: 0;
   right: 0;
   background-color: var(--background);
+  transition: all 0.5s;
 }
 .main-header-main {
   font-size: 60px;
@@ -43,6 +44,7 @@
 
 .lists-container-main {
   display: flex;
+  height: 70%;
   width: 100%;
   justify-content: space-around;
   position: absolute;
@@ -89,6 +91,7 @@
   position: absolute;
   right: -100%;
   background-color: var(--background);
+  transition: all 0.5s;
 }
 
 .profil-header-main {
