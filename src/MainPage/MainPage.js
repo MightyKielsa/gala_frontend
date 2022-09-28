@@ -1,6 +1,7 @@
 import "./MainPage.css";
 import RegButton from "../RegButton/RegButton.js";
 import WinnersList from "../WinnersList/WinnersList";
+import { useState } from "react";
 
 function MainPage() {
   const wiadomosciArr = [
@@ -19,6 +20,8 @@ function MainPage() {
   let userWiadomosciInfo = { number: 0, ranking: 0 };
   let userSlowaInfo = { number: 0, ranking: 0 };
 
+  let [pageVar, setPageVar] = useState(1);
+
   for (let i = 0; i < wiadomosciArr.length; i++) {
     if (wiadomosciArr[i].name === userName) {
       userWiadomosciInfo = { number: wiadomosciArr[i].number, ranking: i + 1 };
@@ -27,26 +30,61 @@ function MainPage() {
       userSlowaInfo = { number: slowaArr[i].number, ranking: i + 1 };
     }
   }
-
+  //________________________BUTTONS FOR MAIN-PROFILE TRANSITION________________
   function onProfileClick() {
     var mainPageCont = document.getElementById("main-page-container");
-    mainPageCont.style.right = "100%";
     var profilPageCont = document.getElementById("profil-page-container");
-    profilPageCont.style.right = 0;
+    var memePageCont = document.getElementById("meme-page-container");
+    if (pageVar === 1) {
+      setPageVar(2);
+      mainPageCont.style.right = "100%";
+      profilPageCont.style.right = 0;
+      memePageCont.style.right = 0;
+      memePageCont.style.top = "100%";
+    } else if (pageVar === 2) {
+      setPageVar(1);
+      mainPageCont.style.right = 0;
+      mainPageCont.style.top = 0;
+      profilPageCont.style.right = "-100%";
+      memePageCont.style.right = 0;
+      memePageCont.style.top = "100%";
+    } else if (pageVar === 3) {
+      setPageVar(2);
+      mainPageCont.style.transition = "all 0.5s";
+      memePageCont.style.right = "100%";
+      profilPageCont.style.right = 0;
+      mainPageCont.style.top = "-100%";
+      mainPageCont.style.right = 0;
+    }
   }
 
-  function onPowrotClick() {
+  //________________________BUTTONS FOR MAIN-MEME TRANSITION________________
+  function onWiecejClick() {
     var mainPageCont = document.getElementById("main-page-container");
-    mainPageCont.style.right = 0;
-    var profilPageCont = document.getElementById("profil-page-container");
-    profilPageCont.style.right = "-100%";
+    var memePageCont = document.getElementById("meme-page-container");
+    if (pageVar === 1) {
+      mainPageCont.style.top = "-100%";
+      memePageCont.style.top = 0;
+      setPageVar(3);
+    } else if (pageVar === 3) {
+      mainPageCont.style.top = 0;
+      memePageCont.style.top = "100%";
+      setPageVar(1);
+    }
   }
 
+  function onWylogujClick() {
+    window.location.href = "/";
+  }
   return (
     <div className="main-page-viewport">
       <section className="main-page-container" id="main-page-container">
         <h1 className="main-header-main">Gala Spierdolenia 2022</h1>
-        <RegButton btnName="WYLOGUJ" btnId="left-button-main" />
+        <RegButton
+          btnName="WYLOGUJ"
+          btnId="left-button-main"
+          onClick={onWylogujClick}
+        />
         <RegButton
           btnName="PEDOFIL"
           btnId="right-button-main"
@@ -62,12 +100,20 @@ function MainPage() {
             listName="Najwiecej slow:"
           ></WinnersList>
         </div>
-        <RegButton btnName="Wiecej spierdolenia" btnId="left-low-button-main" />{" "}
+        <RegButton
+          btnName="Wiecej spierdolenia"
+          btnId="left-low-button-main"
+          onClick={onWiecejClick}
+        />{" "}
         <RegButton btnName="Zaglosuj" btnId="right-low-button-main" />
       </section>
       {/* ________________________PROFILE PAGE_________________________ */}
       <section className="profil-page-container" id="profil-page-container">
-        <RegButton btnName="WYLOGUJ" btnId="left-button-profile" />
+        <RegButton
+          btnName="WYLOGUJ"
+          btnId="left-button-profile"
+          onClick={onWylogujClick}
+        />
         <RegButton btnName="ZAGLOSUJ" btnId="right-button-profile" />
         <h1 className="profil-header-main">Profil Spierdolenia</h1>
         <div className="info-container-profile">
@@ -94,8 +140,28 @@ function MainPage() {
         <RegButton
           btnName="POWROT"
           btnId="bottom-button-profile"
-          onClick={onPowrotClick}
+          onClick={onProfileClick}
         />
+      </section>
+      {/* ________________________MEME PAGE_________________________ */}
+      <section className="meme-page-container" id="meme-page-container">
+        <RegButton
+          btnName="WYLOGUJ"
+          btnId="left-button-meme"
+          onClick={onWylogujClick}
+        />
+        <RegButton
+          btnName="PEDOFIL"
+          btnId="right-button-meme"
+          onClick={onProfileClick}
+        />
+        <div class="ranking-container-meme"></div>
+        <RegButton
+          btnName="Wiecej spierdolenia"
+          btnId="left-low-button-main"
+          onClick={onWiecejClick}
+        />{" "}
+        <RegButton btnName="Zaglosuj" btnId="right-low-button-main" />
       </section>
     </div>
   );
