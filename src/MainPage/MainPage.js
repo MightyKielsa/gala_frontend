@@ -20,7 +20,8 @@ function MainPage() {
   let userWiadomosciInfo = { number: 0, ranking: 0 };
   let userSlowaInfo = { number: 0, ranking: 0 };
 
-  let [pageVar, setPageVar] = useState(1);
+  let [horizontal, setHorizontal] = useState(0);
+  let [vertical, setVertical] = useState(0);
 
   for (let i = 0; i < wiadomosciArr.length; i++) {
     if (wiadomosciArr[i].name === userName) {
@@ -35,26 +36,25 @@ function MainPage() {
     var mainPageCont = document.getElementById("main-page-container");
     var profilPageCont = document.getElementById("profil-page-container");
     var memePageCont = document.getElementById("meme-page-container");
-    if (pageVar === 1) {
-      setPageVar(2);
+    if (horizontal === 0 && vertical === 0) {
+      setHorizontal(1);
       mainPageCont.style.right = "100%";
       profilPageCont.style.right = 0;
       memePageCont.style.right = 0;
       memePageCont.style.top = "100%";
-    } else if (pageVar === 2) {
-      setPageVar(1);
+    } else if (horizontal === 1 && vertical === 0) {
+      setHorizontal(0);
       mainPageCont.style.right = 0;
       mainPageCont.style.top = 0;
       profilPageCont.style.right = "-100%";
-      memePageCont.style.right = 0;
-      memePageCont.style.top = "100%";
-    } else if (pageVar === 3) {
-      setPageVar(2);
-      mainPageCont.style.transition = "all 0.5s";
+    } else if (horizontal === 0 && vertical === 1) {
+      setHorizontal(1);
       memePageCont.style.right = "100%";
       profilPageCont.style.right = 0;
-      mainPageCont.style.top = "-100%";
-      mainPageCont.style.right = 0;
+    } else if (horizontal === 1 && vertical === 1) {
+      setHorizontal(0);
+      memePageCont.style.right = 0;
+      profilPageCont.style.right = "-100%";
     }
   }
 
@@ -62,14 +62,14 @@ function MainPage() {
   function onWiecejClick() {
     var mainPageCont = document.getElementById("main-page-container");
     var memePageCont = document.getElementById("meme-page-container");
-    if (pageVar === 1) {
+    if (vertical === 0) {
+      setVertical(1);
       mainPageCont.style.top = "-100%";
       memePageCont.style.top = 0;
-      setPageVar(3);
-    } else if (pageVar === 3) {
+    } else if (vertical === 1) {
+      setVertical(0);
       mainPageCont.style.top = 0;
       memePageCont.style.top = "100%";
-      setPageVar(1);
     }
   }
 
