@@ -3,8 +3,8 @@ import ReactDOM from "react-dom/client";
 import "./index.css";
 import reportWebVitals from "./reportWebVitals";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
-import App from "./App/App";
-import MainPage from "./MainPage/MainPage.js";
+import App from "./Components/App/App";
+import MainPage from "./Components/MainPage/MainPage.js";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
