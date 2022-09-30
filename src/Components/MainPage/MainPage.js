@@ -154,7 +154,7 @@ function MainPage() {
           onClick={onWylogujClick}
         />
         <RegButton
-          btnName="PEDOFIL"
+          btnName="PROFIL"
           btnId="right-button-main"
           onClick={onProfileClick}
         />
@@ -219,7 +219,7 @@ function MainPage() {
           onClick={onWylogujClick}
         />
         <RegButton
-          btnName="PEDOFIL"
+          btnName="PROFIL"
           btnId="right-button-meme"
           onClick={onProfileClick}
         />
