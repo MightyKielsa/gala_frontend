@@ -18,3 +18,11 @@
 .main-button:hover {
   cursor: pointer;
 }
+
+#high-main-button {
+  top: 60%;
+}
+
+#low-main-button {
+  top: 80%;
+}

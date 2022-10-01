@@ -11,7 +11,11 @@ function Landing() {
     <div>
       <Curtains></Curtains>
       <h1 className="main-header-landing">Gala Spierdolenia 2022</h1>
-      <MainButton buttonText="Zaczynajmy!" onClick={onButtonClick}></MainButton>
+      <MainButton
+        buttonText="Zaczynajmy!"
+        position="high"
+        onClick={onButtonClick}
+      ></MainButton>
     </div>
   );
 }
