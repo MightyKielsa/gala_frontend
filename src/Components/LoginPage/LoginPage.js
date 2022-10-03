@@ -3,9 +3,11 @@ import Curtains from "../Curtains/Curtains";
 import MainButton from "../MainButton/MainButton.js";
 
 function LoginPage() {
-  function onZalogujClick() {}
+  function onZalogujClick() {
+    window.location.href = "/main";
+  }
   return (
-    <div>
+    <div id="login-page">
       <Curtains></Curtains>
       <h1 className="main-header-login">Gala Spierdolenia 2022</h1>
       <div className="form-background-login">

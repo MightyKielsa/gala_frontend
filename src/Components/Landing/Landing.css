@@ -10,3 +10,12 @@
   font-weight: 600;
   width: max-content;
 }
+
+#landing-page {
+  background-color: var(--background);
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+}
