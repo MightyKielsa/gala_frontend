@@ -60,6 +60,11 @@ function MemeCard(props) {
           );
         })}
       </div>
+      <div className="meme-author-bar">
+        <p>
+          <b>AUTHOR:</b> {props.meme.author}
+        </p>
+      </div>
     </div>
   );
 }
