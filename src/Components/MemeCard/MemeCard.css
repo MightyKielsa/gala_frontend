@@ -1,0 +1,10 @@
+.meme-card {
+  width: 400px;
+  height: 400px;
+  background-color: brown;
+  z-index: 1000;
+}
+
+.emoji-bar {
+  display: flex;
+}

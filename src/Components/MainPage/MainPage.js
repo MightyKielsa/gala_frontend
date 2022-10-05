@@ -2,6 +2,7 @@ import "./MainPage.css";
 import RegButton from "../RegButton/RegButton.js";
 import WinnersList from "../WinnersList/WinnersList";
 import { useState } from "react";
+import MemeCard from "../MemeCard/MemeCard.js";
 
 function MainPage() {
   const wiadomosciArr = [
@@ -44,7 +45,7 @@ function MainPage() {
       emojis: [
         { emojiName: "Haha", emojiClicks: 5 },
         { emojiName: "Like", emojiClicks: 3 },
-        { emojiName: "Yay", emojiClicks: 3 },
+        { emojiName: "Dislike", emojiClicks: 3 },
       ],
     },
     {
@@ -223,7 +224,11 @@ function MainPage() {
           btnId="right-button-meme"
           onClick={onProfileClick}
         />
-        <div class="ranking-container-meme"></div>
+        <div className="ranking-container-meme">
+          {memeArr.map((item, index) => {
+            return <MemeCard emojis={item} key={index}></MemeCard>;
+          })}
+        </div>
         <RegButton
           btnName="Wiecej spierdolenia"
           btnId="left-low-button-main"

@@ -162,3 +162,13 @@
   right: 40px;
   top: 40px;
 }
+
+.ranking-container-meme {
+  position: absolute;
+  width: auto;
+  left: 0;
+  right: 0;
+  top: 300px;
+  bottom: 300px;
+  overflow-x: scroll;
+}
