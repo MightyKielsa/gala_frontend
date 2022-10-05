@@ -165,10 +165,16 @@
 
 .ranking-container-meme {
   position: absolute;
-  width: auto;
+  height: auto;
   left: 0;
   right: 0;
-  top: 300px;
-  bottom: 300px;
+  top: 200px;
+  bottom: 200px;
   overflow-x: scroll;
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  gap: 30px;
+  padding-left: 30px;
+  padding-right: 30px;
 }

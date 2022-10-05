@@ -226,7 +226,7 @@ function MainPage() {
         />
         <div className="ranking-container-meme">
           {memeArr.map((item, index) => {
-            return <MemeCard emojis={item} key={index}></MemeCard>;
+            return <MemeCard meme={item} key={index}></MemeCard>;
           })}
         </div>
         <RegButton

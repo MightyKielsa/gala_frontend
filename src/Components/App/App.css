@@ -1,21 +1,24 @@
-@import url('https://fonts.googleapis.com/css2?family=Kanit:wght@400;600&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Kanit:wght@400;600&display=swap");
 
 :root {
-    --primary: #058ED9;
-	--primary-tint: #50b0e4;
-    --primary-shade: #035582;
-	--primary-font-light: #e6f4fb;
-	--primary-font-dark: #011c2b;
-	--secondary: #C1292E;
-	--secondary-tint: #d4696d;
-    --secondary-shade: #871d20;
-	--supporting-1: #241023;
-	--supporting-2: #F71735;
-	--background: #F4EBD9;
-	--font-fam1: 'Kanit', sans-serif;
+  --primary: #058ed9;
+  --primary-tint: #50b0e4;
+  --primary-shade: #035582;
+  --primary-font-light: #e6f4fb;
+  --primary-font-dark: #011c2b;
+  --secondary: #c1292e;
+  --secondary-tint: #d4696d;
+  --secondary-shade: #871d20;
+  --supporting-1: #241023;
+  --supporting-2: #f71735;
+  --background: #f4ebd9;
+  --font-fam1: "Kanit", sans-serif;
 }
 
+* {
+  box-sizing: border-box;
+}
 .App {
-    background-color: var(--background);
-    color: var(--primary-font-dark);
+  background-color: var(--background);
+  color: var(--primary-font-dark);
 }
